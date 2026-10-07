@@ -35,5 +35,6 @@ urlpatterns = [
     path('gallery/', views.gallery),
     path('contact/', views.contact),
     path('employee/',views.employee),
-    path('employees/',views.employees)
+    path('employees/',views.employees),
+    path('student/',views.student)
 ]

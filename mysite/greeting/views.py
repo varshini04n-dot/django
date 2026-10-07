@@ -22,3 +22,6 @@ def employee(request):
 def employees(request):
     details=[{"name": "Varshi", "jobtitle": "Developer", "salary": 50000,"worktime":"full-time"}, {"name": "Kows", "jobtitle": "Designer", "salary": 45000,"worktime":"part-time"}, {"name": "Bismi", "jobtitle": "Manager", "salary": 60000,"worktime":"full-time"}]
     return render(request, 'emp.html', {"detail": details})
+def student(request):
+    students=[{"name": "Varshi", "grade": "A", "level": "pass"}, {"name": "Kows", "age": 21, "grade": "B", "level": "fail"}, {"name": "Bismi", "age": 22, "grade": "A", "level": "pass "}]
+    return render(request, 'student.html', {"stu": students})

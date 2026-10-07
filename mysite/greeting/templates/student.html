@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1 style="text-align: center;">Student Details</h1>
+    {% if not stu %}
+        <p>No students found</p>
+    {% endif %}
+    {% for s in stu %}
+        <p>Name: {{s.name}}</p>
+        <p>Grade: {{s.grade}}</p>
+        {% if s.level == "pass" %}
+            <p style="color: green;">Pass</p>
+        {% else %}
+            <p style="color: red;">Fail</p>
+        {% endif %}
+    
+    {% endfor %}
+</body>
+</html>
