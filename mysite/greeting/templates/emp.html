@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if not detail %}
+        <p>No employees available</p>
+    {% endif %}
+    {% for e in emps %}
+    <p>{{e}}</p>
+    {% endfor %}
+    
+    {% for d in detail %}
+    <h1>{{d.name}}</h1>
+    <p>{{d.jobtitle}}</p>
+    <p>{{d.salary}}</p>
+    <p>{{d.worktime}}</p>
+    
+    
+    {% if d.worktime == "full-time" %}
+        <p style="color: green;"   >Full-time</p>
+    {% else %}
+        <p style="color: red;">Part-time</p>
+    {% endif %}
+    
+    {% endfor %}
+</body>
+</html>

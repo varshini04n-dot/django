@@ -26,3 +26,14 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
 ]
+from django.contrib import admin
+from django.urls import path
+from greeting import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('gallery/', views.gallery),
+    path('contact/', views.contact),
+    path('employee/',views.employee),
+    path('employees/',views.employees)
+]
